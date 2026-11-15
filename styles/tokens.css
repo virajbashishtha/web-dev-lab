@@ -1,0 +1,40 @@
+/* Practical P7: Design Tokens & Typography Scale */
+
+:root {
+  /* Color Palette - Emerald & Indigo Theme */
+  --primary: #10b981;
+  --primary-hover: #059669;
+  --accent: #6366f1;
+  --accent-light: #818cf8;
+  --bg-dark: #090d16;
+  --surface: #131b2e;
+  --surface-hover: #1e293b;
+  --text-main: #f1f5f9;
+  --text-muted: #94a3b8;
+  --border-color: #1e293b;
+
+  /* Typography */
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-serif: "Times New Roman", Times, serif;
+
+  /* Fluid Font Sizes */
+  --font-sm: clamp(0.85rem, 0.82rem + 0.15vw, 0.95rem);
+  --font-base: clamp(1rem, 0.96rem + 0.2vw, 1.05rem);
+  --font-lg: clamp(1.2rem, 1.15rem + 0.35vw, 1.35rem);
+  --font-xl: clamp(1.5rem, 1.35rem + 0.75vw, 2rem);
+  --font-hero: clamp(2.1rem, 1.9rem + 1.2vw, 2.9rem);
+
+  /* Spacing Scale */
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+
+  /* Borders & Radius */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-full: 9999px;
+  --shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+}
