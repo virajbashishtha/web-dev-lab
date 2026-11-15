@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viraj Bhashishtha | Semantic Bio (P5)</title>
+  <link rel="stylesheet" href="styles/tokens.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <style>
+    .bio-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: var(--space-xl);
+      margin-top: var(--space-2xl);
+    }
+    .profile-card {
+      background: var(--surface);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: var(--space-lg);
+      text-align: center;
+    }
+    .avatar-box {
+      width: 110px;
+      height: 110px;
+      margin: 0 auto var(--space-md);
+      border-radius: var(--radius-full);
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: var(--font-xl);
+      font-weight: bold;
+      color: white;
+    }
+    .fact-card {
+      background: var(--bg-dark);
+      padding: var(--space-md);
+      border-radius: var(--radius-sm);
+      margin-top: var(--space-lg);
+      text-align: left;
+    }
+    .fact-card ul {
+      list-style-type: none;
+      margin-top: var(--space-xs);
+    }
+    .fact-card li {
+      padding: 3px 0;
+      font-size: var(--font-sm);
+      color: var(--text-muted);
+    }
+    .bio-header {
+      padding: var(--space-md) 0;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .bio-footer {
+      margin-top: var(--space-2xl);
+      padding: var(--space-lg) 0;
+      border-top: 1px solid var(--border-color);
+      text-align: center;
+      font-size: var(--font-sm);
+      color: var(--text-muted);
+    }
+    @media (max-width: 768px) {
+      .bio-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Semantic Header -->
+  <header class="bio-header">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+      <a href="index.html" style="font-weight: bold;">← Return to Portfolio</a>
+      <span style="color: var(--primary); font-size: var(--font-sm);">Practical P5 Page</span>
+    </div>
+  </header>
+
+  <!-- Semantic Main Landmark -->
+  <main class="container">
+    <div class="bio-grid">
+      
+      <!-- Article: Primary Content -->
+      <article>
+        <header>
+          <span style="color: var(--primary); text-transform: uppercase; font-size: var(--font-sm); font-weight: bold;">Student Profile</span>
+          <h1>Viraj Bhashishtha</h1>
+          <p style="font-size: var(--font-lg); margin-top: 4px;">B.Tech CSE Student • Bosscoder School of Technology</p>
+        </header>
+
+        <section style="margin-top: var(--space-xl);">
+          <h2>Biography</h2>
+          <p style="margin-top: var(--space-xs);">
+            Hi, I'm Viraj! I am a 1st-semester Computer Science undergraduate student at Bosscoder School of Technology. I'm exploring modern web design, learning semantic HTML5 elements, CSS styling tokens, and layout systems like Flexbox and Grid.
+          </p>
+          <p style="margin-top: var(--space-sm);">
+            This page demonstrates the implementation of semantic tags (header, main, article, section, figure, figcaption, aside, footer) without relying on unsemantic div wrappers.
+          </p>
+        </section>
+
+        <!-- Academic Background -->
+        <section style="margin-top: var(--space-xl);">
+          <h2>Academic Path</h2>
+          <div style="margin-top: var(--space-sm); border-left: 2px solid var(--primary); padding-left: var(--space-md);">
+            <h4>Bachelor of Technology (CSE)</h4>
+            <p><strong>Bosscoder School of Technology</strong> • 2026 - Present</p>
+            <p>1st Semester foundations in computing, web development, and logic design.</p>
+          </div>
+        </section>
+
+        <!-- Skills & Goals -->
+        <section style="margin-top: var(--space-xl);">
+          <h2>Key Interests</h2>
+          <ul style="margin-top: var(--space-xs); padding-left: 20px; color: var(--text-muted);">
+            <li>Frontend web development and responsive layouts</li>
+            <li>Git version control and GitHub branch management</li>
+            <li>Writing accessible, high-performance HTML/CSS</li>
+          </ul>
+        </section>
+      </article>
+
+      <!-- Aside: Sidebar Panel -->
+      <aside>
+        <div class="profile-card">
+          <!-- Figure and Figcaption -->
+          <figure>
+            <div class="avatar-box">VB</div>
+            <figcaption>
+              <strong>Viraj Bhashishtha</strong><br>
+              <span style="font-size: var(--font-sm); color: var(--text-muted);">Bosscoder School of Technology</span>
+            </figcaption>
+          </figure>
+
+          <div class="fact-card">
+            <h3 style="font-size: var(--font-base); color: var(--text-main);">Fast Facts</h3>
+            <ul>
+              <li><strong>Branch:</strong> B.Tech CSE</li>
+              <li><strong>Term:</strong> Semester 1</li>
+              <li><strong>College:</strong> Bosscoder School of Tech</li>
+              <li><strong>Focus:</strong> HTML5 &amp; CSS Layouts</li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- Semantic Footer -->
+  <footer class="bio-footer">
+    <div class="container">
+      <p>&copy; 2026 Viraj Bhashishtha • Bosscoder School of Technology</p>
+    </div>
+  </footer>
+
+</body>
+</html>
