@@ -1,0 +1,80 @@
+/* Practical P11 & P12: CSS Grid Layouts */
+
+/* --- Advanced Auto-Fit Projects Grid (P12) --- */
+.showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-lg);
+  margin-top: var(--space-lg);
+}
+
+/* Featured card spanning 2 columns */
+@media (min-width: 850px) {
+  .card-item.featured-wide {
+    grid-column: span 2;
+  }
+}
+
+/* --- Newspaper 3-Column Editorial Grid (P11) --- */
+.news-layout-grid {
+  display: grid;
+  grid-template-columns: 2.2fr 1.2fr 1fr;
+  grid-template-areas:
+    "masthead masthead masthead"
+    "lead     col2     col3"
+    "bottom   bottom   bottom";
+  gap: var(--space-xl);
+  margin: var(--space-xl) 0;
+  background: var(--surface);
+  border: 1px solid var(--border-color);
+  padding: var(--space-xl);
+  border-radius: var(--radius-md);
+}
+
+.news-masthead-area {
+  grid-area: masthead;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: var(--space-md);
+  text-align: center;
+}
+
+.news-lead-column {
+  grid-area: lead;
+}
+
+.news-second-column {
+  grid-area: col2;
+  border-left: 1px solid var(--border-color);
+  padding-left: var(--space-md);
+}
+
+.news-third-column {
+  grid-area: col3;
+  border-left: 1px solid var(--border-color);
+  padding-left: var(--space-md);
+}
+
+.news-bottom-area {
+  grid-area: bottom;
+  border-top: 1px solid var(--border-color);
+  padding-top: var(--space-md);
+  text-align: center;
+  font-size: var(--font-sm);
+  color: var(--text-muted);
+}
+
+@media (max-width: 800px) {
+  .news-layout-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "masthead"
+      "lead"
+      "col2"
+      "col3"
+      "bottom";
+  }
+  .news-second-column, .news-third-column {
+    border-left: none;
+    padding-left: 0;
+  }
+}

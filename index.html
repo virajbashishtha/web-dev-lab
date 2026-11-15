@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viraj Bhashishtha | Web Dev Portfolio (P1–P13)</title>
+  
+  <link rel="stylesheet" href="styles/tokens.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="styles/grid.css">
+  
+  <style>
+    .section-heading {
+      text-align: center;
+      margin-bottom: var(--space-xl);
+    }
+    .section-heading h2 {
+      color: var(--text-main);
+    }
+    .section-heading p {
+      color: var(--primary);
+      font-size: var(--font-sm);
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .contact-card {
+      max-width: 520px;
+      margin: 0 auto;
+      background: var(--surface);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: var(--space-xl);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-md);
+    }
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .input-group label {
+      font-size: var(--font-sm);
+      font-weight: 500;
+    }
+    .text-input {
+      padding: 10px;
+      background: var(--bg-dark);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      color: var(--text-main);
+      font-family: inherit;
+    }
+    .text-input:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- P8 & P9 & P10: Sticky Header with Flexbox Navigation -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-link">Viraj<span>.dev</span></a>
+      
+      <nav>
+        <ul class="nav-list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#compare">Flex vs Grid</a></li>
+          <li><a href="bio.html">Bio (P5)</a></li>
+          <li><a href="newspaper.html">Gazette (P11)</a></li>
+        </ul>
+      </nav>
+
+      <a href="#contact" class="btn">Contact</a>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Hero Section (P6, P9) -->
+    <section class="hero-section" id="hero">
+      <div class="hero-info">
+        <span style="color: var(--primary); font-weight: 600; font-size: var(--font-sm);">B.Tech CSE • 1st Semester</span>
+        <h1 style="margin: var(--space-xs) 0 var(--space-sm);">Hi, I'm Viraj Bhashishtha</h1>
+        <p style="font-size: var(--font-lg); margin-bottom: var(--space-lg);">
+          Undergraduate student at <strong>Bosscoder School of Technology</strong>. Building responsive web projects and studying modern HTML5, CSS layout systems, and Git workflows.
+        </p>
+        <div style="display: flex; gap: var(--space-md);">
+          <a href="#projects" class="btn">View Projects</a>
+          <a href="bio.html" class="btn" style="background: transparent; border: 1px solid var(--border-color); color: var(--text-main);">My Bio Page</a>
+        </div>
+      </div>
+
+      <div class="hero-badge-card">
+        <div style="width: 80px; height: 80px; border-radius: var(--radius-full); background: var(--primary); margin: 0 auto var(--space-md); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; color: #090d16;">VB</div>
+        <h3>Viraj Bhashishtha</h3>
+        <p style="font-size: var(--font-sm); margin-top: 4px;">Bosscoder School of Technology</p>
+        <p style="font-size: var(--font-sm); color: var(--primary); margin-top: var(--space-xs);">Web Development Lab (P1–P13)</p>
+      </div>
+    </section>
+
+    <!-- About Section (P6) -->
+    <section id="about" style="padding: var(--space-2xl) 0;">
+      <div class="section-heading">
+        <p>Curriculum Foundations</p>
+        <h2>About This Project</h2>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-lg);">
+        <div style="background: var(--surface); padding: var(--space-lg); border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+          <h3 style="color: var(--primary); margin-bottom: var(--space-xs);">Semantic HTML5</h3>
+          <p>Structuring documents with meaningful elements like header, main, section, article, figure, and footer for optimal accessibility.</p>
+        </div>
+        <div style="background: var(--surface); padding: var(--space-lg); border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+          <h3 style="color: var(--primary); margin-bottom: var(--space-xs);">Modern Layout Engines</h3>
+          <p>Utilizing Flexbox for 1-dimensional navigation and CSS Grid for 2-dimensional auto-fitting project cards and multi-column articles.</p>
+        </div>
+        <div style="background: var(--surface); padding: var(--space-lg); border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+          <h3 style="color: var(--primary); margin-bottom: var(--space-xs);">Git &amp; Version Control</h3>
+          <p>Applying professional Git branch management, atomic commits, version tags, and GitHub remote repositories.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" style="padding: var(--space-xl) 0;">
+      <div class="section-heading">
+        <p>Course Topics</p>
+        <h2>Skills &amp; Technologies</h2>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: var(--space-sm); justify-content: center;">
+        <span style="background: var(--surface); border: 1px solid var(--border-color); padding: 8px 16px; border-radius: var(--radius-full); font-size: var(--font-sm);">Terminal CLI</span>
+        <span style="background: var(--surface); border: 1px solid var(--border-color); padding: 8px 16px; border-radius: var(--radius-full); font-size: var(--font-sm);">Git Workflow</span>
+        <span style="background: var(--surface); border: 1px solid var(--border-color); padding: 8px 16px; border-radius: var(--radius-full); font-size: var(--font-sm);">HTML5 Semantics</span>
+        <span style="background: var(--surface); border: 1px solid var(--border-color); padding: 8px 16px; border-radius: var(--radius-full); font-size: var(--font-sm);">CSS Variables</span>
+        <span style="background: var(--surface); border: 1px solid var(--border-color); padding: 8px 16px; border-radius: var(--radius-full); font-size: var(--font-sm);">CSS Positioning</span>
+        <span style="background: var(--surface); border: 1px solid var(--border-color); padding: 8px 16px; border-radius: var(--radius-full); font-size: var(--font-sm);">Flexbox</span>
+        <span style="background: var(--surface); border: 1px solid var(--border-color); padding: 8px 16px; border-radius: var(--radius-full); font-size: var(--font-sm);">CSS Grid</span>
+      </div>
+    </section>
+
+    <!-- Projects Grid Section (P8, P12) -->
+    <section id="projects" style="padding: var(--space-2xl) 0;">
+      <div class="section-heading">
+        <p>Practicals P8 &amp; P12</p>
+        <h2>Featured Projects Showcase</h2>
+      </div>
+
+      <div class="showcase-grid">
+        
+        <!-- Featured Card: Spans 2 columns -->
+        <article class="card-item featured-wide">
+          <div class="card-preview">
+            <span class="badge-floating">Featured (P11 &amp; P12)</span>
+            3-Column Newspaper Grid
+            <div class="card-hover-panel">
+              <h4 style="color: white;">Newspaper Grid Layout</h4>
+              <p style="color: var(--text-muted); font-size: var(--font-sm);">Built with grid-template-areas</p>
+              <a href="newspaper.html" class="btn">View Live Demo</a>
+            </div>
+          </div>
+          <div class="card-details">
+            <h3>Newspaper Editorial Layout (P11)</h3>
+            <p style="margin-top: var(--space-xs); font-size: var(--font-sm);">
+              Demonstrating a 3-column newspaper front page using CSS Grid with named template areas, dropcaps, and fractional units (2.2fr 1.2fr 1fr).
+            </p>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="card-item">
+          <div class="card-preview">
+            <span class="badge-floating">P5</span>
+            Semantic Bio
+            <div class="card-hover-panel">
+              <h4 style="color: white;">Bio Page</h4>
+              <p style="color: var(--text-muted); font-size: var(--font-sm);">Accessible semantic structure</p>
+              <a href="bio.html" class="btn">View Bio Page</a>
+            </div>
+          </div>
+          <div class="card-details">
+            <h3>Semantic Biography Page</h3>
+            <p style="margin-top: var(--space-xs); font-size: var(--font-sm);">
+              Crafted using article, section, figure, and aside tags to create a clean personal bio page.
+            </p>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="card-item">
+          <div class="card-preview">
+            <span class="badge-floating">P7 &amp; P8</span>
+            Design Tokens
+            <div class="card-hover-panel">
+              <h4 style="color: white;">CSS Tokens</h4>
+              <p style="color: var(--text-muted); font-size: var(--font-sm);">Colors and fluid typography</p>
+              <a href="styles/tokens.css" class="btn">Inspect CSS</a>
+            </div>
+          </div>
+          <div class="card-details">
+            <h3>Design Tokens &amp; Elevation</h3>
+            <p style="margin-top: var(--space-xs); font-size: var(--font-sm);">
+              Reusable CSS custom properties for uniform dark-theme colors, fluid clamp() typography, and spacing scales.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Layout Comparison Section (P13) -->
+    <section id="compare" style="padding: var(--space-2xl) 0;">
+      <div class="section-heading">
+        <p>Practical P13</p>
+        <h2>Choosing Between Flexbox &amp; Grid</h2>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: var(--space-lg);">
+        <div style="background: var(--surface); border: 2px solid var(--primary); border-radius: var(--radius-md); padding: var(--space-lg);">
+          <h3 style="color: var(--primary);">Flexbox (1D)</h3>
+          <p style="margin: var(--space-xs) 0 var(--space-sm);">Best for single-row or single-column alignment:</p>
+          <ul style="padding-left: 20px; font-size: var(--font-sm); color: var(--text-muted); display: flex; flex-direction: column; gap: 6px;">
+            <li>Navigation bars (brand on left, links on right)</li>
+            <li>Centering components vertically or horizontally</li>
+            <li>Form input and button pairings</li>
+            <li>Fluid badge and tag wrapping</li>
+          </ul>
+        </div>
+
+        <div style="background: var(--surface); border: 2px solid var(--accent); border-radius: var(--radius-md); padding: var(--space-lg);">
+          <h3 style="color: var(--accent-light);">CSS Grid (2D)</h3>
+          <p style="margin: var(--space-xs) 0 var(--space-sm);">Best for two-dimensional rows and columns:</p>
+          <ul style="padding-left: 20px; font-size: var(--font-sm); color: var(--text-muted); display: flex; flex-direction: column; gap: 6px;">
+            <li>Overall page scaffolding (header, content, sidebar)</li>
+            <li>Responsive auto-fitting card grids without media queries</li>
+            <li>Editorial column spans and newspaper layouts</li>
+            <li>Clean grid cell positioning without margin hacks</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" style="padding: var(--space-2xl) 0;">
+      <div class="section-heading">
+        <p>Contact</p>
+        <h2>Get in Touch</h2>
+      </div>
+
+      <form class="contact-card" action="#" method="POST" onsubmit="event.preventDefault(); alert('Message sent!');">
+        <div class="input-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" class="text-input" placeholder="Your Name" required>
+        </div>
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" class="text-input" placeholder="Your Email" required>
+        </div>
+        <div class="input-group">
+          <label for="msg">Message</label>
+          <textarea id="msg" name="msg" class="text-input" rows="4" placeholder="Your message..." required></textarea>
+        </div>
+        <button type="submit" class="btn" style="align-self: flex-start;">Send Message</button>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- P10: Multi-Column Flexbox Footer -->
+  <footer class="page-footer">
+    <div class="container">
+      <div class="footer-rows">
+        <div class="footer-section" style="flex: 2 1 300px;">
+          <h3 style="color: var(--text-main); margin-bottom: var(--space-xs);">Viraj Bhashishtha</h3>
+          <p style="font-size: var(--font-sm);">B.Tech CSE Student • Semester 1<br>Bosscoder School of Technology</p>
+        </div>
+        <div class="footer-section">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#compare">Flex vs Grid</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Practicals</h4>
+          <ul>
+            <li><a href="bio.html">P5: Semantic Bio</a></li>
+            <li><a href="newspaper.html">P11: Newspaper Grid</a></li>
+            <li><a href="LAYOUT-COMPARISON.md">P13: Layout Spec</a></li>
+            <li><a href="README.md">P4: README</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom-bar">
+        <p>&copy; 2026 Viraj Bhashishtha • Bosscoder School of Technology</p>
+        <a href="#hero">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
